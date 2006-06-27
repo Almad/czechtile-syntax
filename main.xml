@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+"http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd">
+<book>
+  <title>Czechtile: WikiSyntax pro Čechy</title>
+
+  <bookinfo>
+    <date>27. 6. 2006</date>
+
+    <abstract>
+      <para>Kompletní průvodce Czechtile syntaxí</para>
+    </abstract>
+
+    <author>
+      <surname>Almad</surname>
+    </author>
+  </bookinfo>
+
+  <chapter>
+    <title>Úvod aneb Proč Czechtile</title>
+
+    <para>TODO</para>
+  </chapter>
+
+  <chapter>
+    <title>Dokumentace</title>
+
+    <xi:include href="dokumentace-syntaxe.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude" />
+  </chapter>
+</book>

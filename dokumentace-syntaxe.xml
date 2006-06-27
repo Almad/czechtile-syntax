@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section lang="cs">
+  <title>Dokumentace syntaxe</title>
+
+  <para>V této časti naleznete kompletní dokumentaci Czechtile syntaxe.
+  Užívejte s rozumem.</para>
+
+  <section>
+    <title>Odstavce</title>
+
+    <para>Odstavce je jednoduše čistý text oddělený prázdnou řádkou.</para>
+
+    <example>
+      <title>Ukázka odstavců</title>
+
+      <programlisting>Tohle je první odstavec.
+
+A tohle je druhý odstavec.</programlisting>
+    </example>
+
+    <example>
+      <title>Ukázka nespárvných odstavců</title>
+
+      <programlisting>Tohle je naproti tomu
+pořád jeden odstavec. Protože se Czechtile často používá ve formulářích,
+nebylo by často poznat, zda je zalomení způsobené "enterem", či zda jde o
+zalomení při překročení šířky pole.</programlisting>
+    </example>
+  </section>
+
+  <section>
+    <title>Nadpisy</title>
+
+    <para>Nadpisy se označují pomocí znaku = na začátku a konci příslušného
+    řádku. Množství rovnítek označuje důležitost nadpisu: čím více rovnítek,
+    tím méně důležitý nadpis (Pokud by tomu bylo naopak, pak by se při špatném
+    odhadu hloubky textu musel přeznačovat celý text).</para>
+
+    <para>Zanořování nadpisů musí být postupné (mezi nadpisem první a třetí
+    úrovně musí být nadpis druhé úrovně).</para>
+
+    <example>
+      <title>Ukázka nadpisů</title>
+
+      <programlisting>= Toto je nadpis první úrovně =
+Nějaký text v odstavci
+== Nadpis druhé úrovně ==
+Text v odstavci patřící pod nadpis druhé úrovně
+=== Nadpis třetí úrovně ===
+Zase text
+== Nadpis druhé úrovně ==
+A opět nějaký text</programlisting>
+    </example>
+  </section>
+
+  <section>
+    <title>In-line elementy aneb jednoduché změny</title>
+
+    <para>V textu často chceme zvýraznit nějaké slovo, neb je v okolním textu
+    důležité. To učiníme pomocí dvojitých či trojitých dvojitých
+    uvozovek.<example>
+        <title>Zvýraznění v textu</title>
+
+        <para>Tohle je běžný text s ""důležitým"" a """velmi důležitým"""
+        slovem.</para>
+      </example></para>
+
+    <para>Zvýraznění nelze použít v nadpisech.</para>
+  </section>
+</section>
