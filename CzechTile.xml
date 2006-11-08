@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.0//EN"
+"http://www.oasis-open.org/docbook/xml/simple/1.0/sdocbook.dtd">
+<article class="specification" lang="cs">
+  <title>Dokumentace syntaxe CzechTile</title>
+
+  <section>
+    <title>Úvod</title>
+
+    <para>Syntax CzechTile je pokusem o vytvoření formátovací syntaxe pro
+    konverzi čistého textu do (x)html. Pro tento účel existuje již celá řada
+    nástrojů od různých pomůcek integrovaných do produktů jako jsou různá
+    diksusní fóra (asi neznámější je <ulink
+    url="http://phpbb.com">phpbb</ulink>) až po samostatné projekty jako je
+    <ulink url="http://texy.info">Texy!</ulink> nebo <ulink
+    url="http://textism.com/tools/textile">Textile</ulink>.</para>
+
+    <para>CzechTile má dva cíle, které se snaží splnit. Je to apel na
+    sémantiku kódu a dostupnost syntaxe pro české klávesnice, respektive pro
+    její alfanumerickou část. Syntax je proto vytvořena tak, aby každý element
+    jednoznačně a jasně korespondoval s tím, co má představovat, strojové
+    zpracování a vzhled je odsunut do pozadí (i když ne zcela úplně,
+    přirozeně). Limity na použité znaky kladou sice jistá omezení co se týče
+    celkové komplexnosti. Tam kde však již znaky nedostačují nastupuje systém
+    maker, jakožto nástroje s téměř nevyčerpatelnými možnostmi.</para>
+  </section>
+
+  <section>
+    <title>Popis syntaxe</title>
+
+    <section>
+      <title>Odstavce a řádkování</title>
+
+      <para>Odstavec provedeme prostým dvojitým odřádkováním. <emphasis>(tohle
+      jsem střelil od boku, ale počítám, že to tak bude :-))</emphasis></para>
+
+      <example>
+        <title>Odstavec</title>
+
+        <literallayout><userinput>První odstavec...
+
+Druhý odstavec...</userinput></literallayout>
+      </example>
+
+      <para>Jednoduché řádkování - <emphasis>je nutno
+      domyslet!</emphasis></para>
+    </section>
+
+    <section>
+      <title>Nadpisy</title>
+
+      <para>Snahou CzechTile je přímočarost a jednoduchost zápisu nadpisů.
+      Proto je k uvozování použit pouze znak = a rozhoduje jeho četnost.
+      Nadpis nejvyšší úrovně má kolem sebe nejméně rovnítek. Viz.
+      příklad.</para>
+
+      <example>
+        <title>Nadpisy</title>
+
+        <literallayout><userinput>= Nadpis 1 =
+
+== Nadpis 1.1 ==
+
+=== Nadpis 1.1.1 ===</userinput></literallayout>
+      </example>
+
+      <note>
+        <para>Bude zápis absolutní nebo relativní? Jaká bude maximální hloubka
+        (bude-li určena)?</para>
+      </note>
+    </section>
+
+    <section>
+      <title>Horizontální čára</title>
+
+      <para>Je jednoduše zapsatelná pomocí pomlk:</para>
+
+      <example>
+        <title>Horizontální čára</title>
+
+        <literallayout><userinput>---</userinput></literallayout>
+      </example>
+    </section>
+
+    <section>
+      <title>Zdrojový kód / citace</title>
+
+      <para>Pro zápis je použita dvojice paragrafů (§§). Uvozování
+      <emphasis>musí</emphasis> být provedeno blokově. Viz. příklad:</para>
+
+      <example>
+        <title>Citace zdrojový kód</title>
+
+        <literallayout><userinput>§§
+Mír nemůže být držen násilím, může jej být dosaženo pouze porozuměním.
+A. Einstein
+§§</userinput></literallayout>
+      </example>
+
+      <note>
+        <para>Stanovit mechanismy k rozlišení citace / kódu? Co s atributy
+        jako zdroj nebo druh syntaxe zdrojáku? Automatické doplňování
+        uvozovek?</para>
+      </note>
+    </section>
+
+    <section>
+      <title>Zkratky, akronymy</title>
+
+      <para><emphasis>K domyšlení</emphasis></para>
+    </section>
+
+    <section>
+      <title>Horní a dolní index</title>
+
+      <para><emphasis>K domyšlení</emphasis></para>
+    </section>
+
+    <section>
+      <title>Odkazy</title>
+
+      <para>Odkazy tvoříme pomocí závorek:</para>
+
+      <example>
+        <title>Závorkové odkazy</title>
+
+        <literallayout><userinput>(http://rpglanet.cz Ultimátní a kůl server o dračáku)</userinput></literallayout>
+      </example>
+    </section>
+
+    <section>
+      <title>Obrázky</title>
+
+      <para>Obrázky můžeme odkazovat pomocí předchozí syntaxe, chceme-li je
+      ale zobrazovat přímo v textu, použijeme následující syntax:</para>
+
+      <example>
+        <title>Užití obrázků</title>
+
+        <literallayout><userinput>((obrazek,http://rpgplanet.cz/images/logo.png,Logo RPGPlanet,doprava))</userinput></literallayout>
+      </example>
+
+      <para>Zápis obrázků je v podstatě makro s následujícími
+      argumenty:</para>
+
+      <para><emphasis>typ objektu</emphasis> - v tomto případě obrazek</para>
+
+      <para><emphasis>URI</emphasis> - tedy cesta k dokumentu (obrázku) (?jaké
+      jsou možnosti absolutního a relativního zápisu?)</para>
+
+      <para><emphasis>jméno</emphasis> - slouží k identifikaci a zpřístupnění
+      obsahu, v případě víceslovného pojmenování je uzavřeme do uvozovek (viz.
+      příklad)</para>
+
+      <para><emphasis>zarovnání</emphasis> - je parametr udávaný v případě, že
+      je obrázek vložen do textu. Tím určíme okraj, ke kterému bude obrázek
+      zarovnán načež z druhé strany bude text obtékat. V případě, že je
+      obrázek na samostané pozici, parametr nespecifikujeme. Obrázek bude
+      zarovnán na střed.</para>
+
+      <example>
+        <title>Obrázek doleva</title>
+
+        <literallayout><userinput>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ((obrazek http://rpgplanet.cz/images/logo.png "Logo RPGPlanet" doleva)) Donec viverra laoreet pede. Nullam molestie. Integer eu elit vel velit egestas interdum. Curabitur risus ipsum, volutpat at, lobortis id, elementum eu, nibh. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed fermentum massa eu ante. Ut velit. Nulla volutpat. Praesent venenatis mi vitae turpis. Nam dolor sapien, rutrum ac, ultrices in, rhoncus ac, quam.</userinput></literallayout>
+      </example>
+
+      <para>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      <inlinemediaobject>
+          <imageobject>
+            <imagedata align="left" fileref="logo.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject> Donec viverra laoreet pede. Nullam molestie.
+      Integer eu elit vel velit egestas interdum. Curabitur risus ipsum,
+      volutpat at, lobortis id, elementum eu, nibh. Aliquam erat volutpat.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed fermentum
+      massa eu ante. Ut velit. Nulla volutpat. Praesent venenatis mi vitae
+      turpis. Nam dolor sapien, rutrum ac, ultrices in, rhoncus ac,
+      quam.</para>
+
+      <example>
+        <title>Obrázek doprava</title>
+
+        <literallayout><userinput>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ((obrazek http://rpgplanet.cz/images/logo.png "Logo RPGPlanet" doprava)) Donec viverra laoreet pede. Nullam molestie. Integer eu elit vel velit egestas interdum. Curabitur risus ipsum, volutpat at, lobortis id, elementum eu, nibh. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed fermentum massa eu ante. Ut velit. Nulla volutpat. Praesent venenatis mi vitae turpis. Nam dolor sapien, rutrum ac, ultrices in, rhoncus ac, quam.</userinput></literallayout>
+      </example>
+
+      <para>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      <inlinemediaobject>
+          <imageobject>
+            <imagedata align="right" fileref="logo.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject> Donec viverra laoreet pede. Nullam molestie.
+      Integer eu elit vel velit egestas interdum. Curabitur risus ipsum,
+      volutpat at, lobortis id, elementum eu, nibh. Aliquam erat volutpat.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed fermentum
+      massa eu ante. Ut velit. Nulla volutpat. Praesent venenatis mi vitae
+      turpis. Nam dolor sapien, rutrum ac, ultrices in, rhoncus ac,
+      quam.</para>
+
+      <example>
+        <title>Obrázek samostatně</title>
+
+        <literallayout><userinput>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec viverra laoreet pede. Nullam molestie. Integer eu elit vel velit egestas interdum. Curabitur risus ipsum, volutpat at, lobortis id, elementum eu, nibh. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed fermentum massa eu ante. Ut velit. Nulla volutpat. Praesent venenatis mi vitae turpis. Nam dolor sapien, rutrum ac, ultrices in, rhoncus ac, quam.
+
+((obrazek http://rpgplanet.cz/images/logo.png "Logo RPGPlanet"))
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec viverra laoreet pede. Nullam molestie. Integer eu elit vel velit egestas interdum. Curabitur risus ipsum, volutpat at, lobortis id, elementum eu, nibh. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed fermentum massa eu ante. Ut velit. Nulla volutpat. Praesent venenatis mi vitae turpis. Nam dolor sapien, rutrum ac, ultrices in, rhoncus ac, quam.</userinput></literallayout>
+      </example>
+
+      <para>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+      viverra laoreet pede. Nullam molestie. Integer eu elit vel velit egestas
+      interdum. Curabitur risus ipsum, volutpat at, lobortis id, elementum eu,
+      nibh. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer
+      adipiscing elit. Sed fermentum massa eu ante. Ut velit. Nulla volutpat.
+      Praesent venenatis mi vitae turpis. Nam dolor sapien, rutrum ac,
+      ultrices in, rhoncus ac, quam.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="logo.png" format="PNG" />
+        </imageobject>
+      </mediaobject>
+
+      <para>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+      viverra laoreet pede. Nullam molestie. Integer eu elit vel velit egestas
+      interdum. Curabitur risus ipsum, volutpat at, lobortis id, elementum eu,
+      nibh. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer
+      adipiscing elit. Sed fermentum massa eu ante. Ut velit. Nulla volutpat.
+      Praesent venenatis mi vitae turpis. Nam dolor sapien, rutrum ac,
+      ultrices in, rhoncus ac, quam.</para>
+    </section>
+
+    <section>
+      <title>Seznamy</title>
+
+      <para>Seznamy máme v podstatě dvojího druhu. Číslované a nečíslované.
+      Číslování pak může být vyjádřeno navíc různým způsobem (latinska, římské
+      č., arabské č., hebrejské p., arménské p... :-)). CzechTile implemetuje
+      odrážky, arabské číslice, římské číslice a latinku. Seznam zahajujeme
+      tak, že před odrážku vložíme ještě mezeru:</para>
+
+      <example>
+        <title>Seznamy</title>
+
+        <literallayout><userinput> - První položka
+  - První podpoložka
+ - Druhá položka
+  - Druhá podpoložka
+
+ 1. První číslo
+  1. První podčíslo prvočísla
+ 1. Druhé číslo
+  1. První podčíslo druhočísla
+  1. Druhé podčíslo druhočísla
+ 1. Třetí číslo
+
+ a. Písmeno a)
+  a. Písmeno aa)
+ a. Písmeno b)
+  a. písmeno ab)
+ a. Písmeno c)
+
+ i. Římská I
+  i. podseznam I
+ i. Římská II
+ i. Římská III</userinput></literallayout>
+      </example>
+
+      <note>
+        <para>Zde je snad vše jasné. I když není zcela jasná přesná syntaxe
+        odrážek. Jde o problém, zda-li nemá být buď na začátku nebo na konci
+        sekvence přítomna mezera, pro jasné odlišení od explicitní snahy
+        napsat odrážku. V případě toho, že nebude toto implementováno, bude
+        používána v těchto případech negace.</para>
+      </note>
+    </section>
+
+    <section>
+      <title>Tabulková data (zatím deprecated)</title>
+
+      <para>Formátování tabulek bude umožněno s další verzí CzechTile.</para>
+    </section>
+
+    <section>
+      <title>Zvýraznění textu</title>
+
+      <para>Pro zvýšení důležitosti textu je použito uazvření do dvojitých
+      uvozovek.</para>
+
+      <example>
+        <title>Zvýraznění</title>
+
+        <literallayout><userinput>Toto je ""zvýrazněný text"", který bude líp vidět.</userinput></literallayout>
+      </example>
+
+      <para>Pro silný (tučný) text využívá CzechTile taktéž uvozovek, ale
+      ztrojených.</para>
+
+      <example>
+        <title>Zvýraznění</title>
+
+        <literallayout><userinput>Toto je """tučný text""", který bude líp vidět.</userinput></literallayout>
+      </example>
+    </section>
+
+    <section>
+      <title>Negace</title>
+
+      <para>Negace je dosti důležitý prvek při zápisu, který umožňuje vypnout
+      syntaxi CzechTile pro konkrétní prvek. Znak, který ji bude označovat je
+      vykřičník.</para>
+
+      <example>
+        <title>Užití negace</title>
+
+        <literallayout><userinput>!(http://rpglanet.cz Kůl ultimátní server o dračáku)</userinput></literallayout>
+      </example>
+
+      <para>Z tohoto zápisu by nemělo resultovat „<ulink
+      url="http://rpgplanet.cz">Kůl ultimátní server o dračáku</ulink>“, ale
+      „(http://rpglanet.cz Kůl ultimátní server o dračáku)“.</para>
+    </section>
+
+    <section>
+      <title>Makra</title>
+
+      <para>Pomocí maker můžeme zapsat jakoukoli z výše zmíněných funkcí
+      CzechTile a také některé další. Typické makro vypadá asi takto:</para>
+
+      <example>
+        <title>Makro</title>
+
+        <literallayout><userinput>((název_makra parametr1 parametr2 parametr3 ...))</userinput></literallayout>
+      </example>
+    </section>
+
+    <section>
+      <title>Typografická pravidla</title>
+
+      <para>Asi tady toho bude víc, než zvládnem...</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>hlídat nedělitelné mezery - entita
+          <computeroutput>&amp;nbsp;</computeroutput>
+          (<computeroutput>&amp;#160</computeroutput>) použitá tehdy
+          když:</term>
+
+          <listitem>
+            <para>máme jednoslovnou spojku nebo předložku</para>
+
+            <para>mezi číslem a jednotkou (7&nbsp;cm,
+            3&nbsp;procenta,...)</para>
+
+            <para>zkratky (s.&nbsp;r.&nbsp;o., a.&nbsp;s.)</para>
+
+            <para>před pomlčkami, jsou-li odděleny mezerou (Jan&nbsp;-&nbsp;to
+            je ten s tím autem&nbsp;-&nbsp;šel do hospody)</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>úzká mezera &amp;thinsp;</term>
+
+          <listitem>
+            <para>používá se při dělení trojcifer v dlouhých číslech
+            (1000000), zlá podpora u IE...</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+      <variablelist>
+        <varlistentry>
+          <term>pomlky a mínus</term>
+
+          <listitem>
+            <para>pro zápis matematických vzorců s odčítáním (−) slouží entita
+            <computeroutput>&amp;minus;</computeroutput>
+            (<computeroutput>&amp;#8722;</computeroutput>), mínus odděleno
+            mezerami, ideálně zúženými</para>
+
+            <para>jako spojovník výrazů složeného slova (česko-anglický,
+            je-li) se používá spojovník, což je onen znak na klávesnici
+            užívaný namísto pomlk, entita
+            (<computeroutput>&amp;#173;</computeroutput>)</para>
+
+            <para>— (<computeroutput>&amp;mdash;</computeroutput>)
+            (<computeroutput>&amp;#8212;</computeroutput>) a –
+            (<computeroutput>&amp;ndash;)</computeroutput>
+            (<computeroutput>&amp;#8211</computeroutput>) jsou pomlčky pro
+            text. Pro vloženou větu (Jan - ten s tím supr autem - tu včera
+            byl), má stejný význam jako čárka, nesmí stát sama na začátku
+            řádku je proto oddělena nedělitelnou mezerou. Dále se používá při
+            označení rozsahu (10-19). Dlouhá pomlka se používá jen v
+            anglosaských zemích</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>další matematické znaky</term>
+
+          <listitem>
+            <para>±- <computeroutput>&amp;plusmn;</computeroutput>
+            (<computeroutput>&amp;#177</computeroutput>)</para>
+
+            <para>× - <computeroutput>&amp;#215;</computeroutput></para>
+
+            <para>÷ - <computeroutput>&amp;#247;</computeroutput></para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+      <variablelist>
+        <varlistentry>
+          <term>tři tečky jako výpustka</term>
+
+          <listitem>
+            <para>nahrazuje entita <computeroutput>&amp;hellip;
+            </computeroutput>(<computeroutput>&amp;#8230</computeroutput>)</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+      <variablelist>
+        <varlistentry>
+          <term>uvozovky</term>
+
+          <listitem>
+            <para>základ v češtině jsou spodní 99 a horní 66. Entity
+            <computeroutput>&amp;bdquo;</computeroutput>
+            (<computeroutput>&amp;#8220</computeroutput>) a
+            <computeroutput>&amp;ldquo;</computeroutput>
+            (<computeroutput>&amp;#8221</computeroutput>)</para>
+
+            <para>pro vnořené se užívá spodní 9 a horní 6. Entity
+            <computeroutput>&amp;sbquo;</computeroutput>
+            (<computeroutput>&amp;#8216</computeroutput>) a
+            <computeroutput>&amp;lsquo;</computeroutput>
+            (<computeroutput>&amp;#8217</computeroutput>)</para>
+
+            <para>pro další vnoření obrácené francouzské.
+            <computeroutput>&amp;raquo;</computeroutput>
+            (<computeroutput>&amp;#187</computeroutput>) a
+            <computeroutput>&amp;laquo;
+            </computeroutput>(<computeroutput>&amp;#171</computeroutput>)</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </section>
+  </section>
+</article>
