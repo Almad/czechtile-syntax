@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.0//EN"
-"http://www.oasis-open.org/docbook/xml/simple/1.0/sdocbook.dtd">
-<article class="specification" lang="cs">
+<chapter lang="cs">
   <title>Dokumentace syntaxe CzechTile</title>
+
+  <abstract>
+    <para>V této kapitole se čtenář dozví, kterak jednoduše začít používat
+    Czechtile. Kapitola je určena všem uživatelům, popisuje základy syntaxe
+    jazyka a jak ho používat.</para>
+  </abstract>
 
   <section>
     <title>Úvod</title>
@@ -348,13 +352,13 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec viverra laoreet 
           <listitem>
             <para>máme jednoslovnou spojku nebo předložku</para>
 
-            <para>mezi číslem a jednotkou (7&nbsp;cm,
-            3&nbsp;procenta,...)</para>
+            <para>mezi číslem a jednotkou (7&#160;cm,
+            3&#160;procenta,...)</para>
 
-            <para>zkratky (s.&nbsp;r.&nbsp;o., a.&nbsp;s.)</para>
+            <para>zkratky (s.&#160;r.&#160;o., a.&#160;s.)</para>
 
-            <para>před pomlčkami, jsou-li odděleny mezerou (Jan&nbsp;-&nbsp;to
-            je ten s tím autem&nbsp;-&nbsp;šel do hospody)</para>
+            <para>před pomlčkami, jsou-li odděleny mezerou (Jan&#160;-&#160;to
+            je ten s tím autem&#160;-&#160;šel do hospody)</para>
           </listitem>
         </varlistentry>
 
@@ -447,4 +451,4 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec viverra laoreet 
       </variablelist>
     </section>
   </section>
-</article>
+</chapter>

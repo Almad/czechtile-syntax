@@ -2,11 +2,9 @@
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd">
 <book lang="cs">
-  <title>Czechtile: WikiSyntax pro Čechy</title>
+  <title>Czechtile: WikiSyntax pro čechy</title>
 
   <bookinfo>
-    <date>27. 6. 2006</date>
-
     <abstract>
       <para>Kompletní průvodce Czechtile syntaxí</para>
     </abstract>
@@ -16,16 +14,33 @@
     </author>
   </bookinfo>
 
+  <preface>
+    <title>Úvod</title>
+
+    <para>Pár slov o této knize</para>
+  </preface>
+
   <chapter>
-    <title>Úvod aneb Proč Czechtile</title>
+    <title>Proč Czechtile</title>
 
     <para>TODO</para>
   </chapter>
 
-  <chapter>
-    <title>Dokumentace</title>
+  <xi:include href="uzivatelska-prirucka.xml"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
 
-    <xi:include href="uzivatelska-prirucka.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude" />
-  </chapter>
+  <xi:include href="uzivatelska-prirucka-pro-pokrocile.xml"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+  <xi:include href="specifikace-jazyka.xml"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+  <xi:include href="seznam-maker.xml"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+  <xi:include href="seznam-nodu.xml"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+  <xi:include href="seznam-expanderu.xml"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
 </book>

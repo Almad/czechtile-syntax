@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter>
+  <title>Czechtile pro pokročilé</title>
+
+  <abstract>
+    <para>Tato kapitola je určena pokročilým uživatelům czechtile a
+    programátorům. Popisuje pokročilé a skrytější vlastnosti jazyka, způsob
+    jich využití a jejich možnosti.</para>
+  </abstract>
+
+  <section>
+    <title>Úvod pro pokročilé</title>
+
+    <para>Makra, vnořování maker apod.</para>
+  </section>
+</chapter>

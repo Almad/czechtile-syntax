@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter lang="cs">
+  <title>Specifikace jazyka</title>
+
+  <abstract>
+    <para>Tato kapitola je určena programátorům: jednak těm, kdo chtějí použít
+    knihovny na Czechtile založené, druhak těm, kteří chtějí vytvořit vlastní
+    implementaci ve svém oblíbeném jazykce. Popisuje různé stupně a způsoby
+    implementaci jazyka a také jeho formální specifikaci a očekávaná chování
+    jednotlivých elementů.</para>
+  </abstract>
+
+  <section>
+    <title>Způsoby implementace Czechtile</title>
+
+    <para>Jazyk Czechtile je možné implementovat ve třech stupních:</para>
+
+    <orderedlist>
+      <listitem>
+        <para>Základy jazyka, tzn. jen základní wiki syntax. Ta odpovídá tomu,
+        co je popsáno v uživatelské příručce.</para>
+      </listitem>
+
+      <listitem>
+        <para>Viz bod 1 + podpora maker</para>
+      </listitem>
+
+      <listitem>
+        <para>Viz bod 2 + veškerá syntax má své odpovídající makro</para>
+      </listitem>
+    </orderedlist>
+  </section>
+
+  <section>
+    <title>Parser a jeho chování</title>
+
+    <para>Jak se má chovat parser jazyka a jaké je jeho chování v okrajových
+    případěch. Pozor, má se jedna o to jak parsovat syntax, ne o popis chování
+    a typu parseru jako takového - to je na implementátorovi.</para>
+  </section>
+
+  <section>
+    <title>Makra a jejich syntax</title>
+
+    <para>Makra, jak se volají, jak se chovají v okrajových případech svého
+    parsování.</para>
+  </section>
+</chapter>
