@@ -141,7 +141,7 @@ A. Einstein
       <example>
         <title>Užití obrázků</title>
 
-        <literallayout><userinput>((obrazek,http://rpgplanet.cz/images/logo.png,Logo RPGPlanet,doprava))</userinput></literallayout>
+        <literallayout><userinput>((obrazek http://rpgplanet.cz/images/logo.png "Logo RPGPlanet" doprava))</userinput></literallayout>
       </example>
 
       <para>Zápis obrázků je v podstatě makro s následujícími
