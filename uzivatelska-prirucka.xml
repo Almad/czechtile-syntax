@@ -75,18 +75,6 @@ Druhý odstavec...</userinput></literallayout>
     </section>
 
     <section>
-      <title>Horizontální čára</title>
-
-      <para>Je jednoduše zapsatelná pomocí pomlk:</para>
-
-      <example>
-        <title>Horizontální čára</title>
-
-        <literallayout><userinput>---</userinput></literallayout>
-      </example>
-    </section>
-
-    <section>
       <title>Zdrojový kód / citace</title>
 
       <para>Pro zápis je použita dvojice paragrafů (§§). Uvozování
