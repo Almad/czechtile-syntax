@@ -123,8 +123,14 @@ A. Einstein
     <section>
       <title>Obrázky</title>
 
-      <para>Obrázky můžeme odkazovat pomocí předchozí syntaxe, chceme-li je
-      ale zobrazovat přímo v textu, použijeme následující syntax:</para>
+      <para>Máme-li obrázky k dispozici přímo v požadované velikosti, stačí
+      zapsat jejich URL. Odkazy začínající na http://, jejichž koncovka je
+      .jpg, .jpeg, .png nebo .gif se automaticky převedou na vložení
+      obrázků.</para>
+
+      <para>Jsou-li podmínky méně ideální, můžeme na obrázky odkazovat pomocí
+      předchozí syntaxe, chceme-li je ale zobrazovat přímo v textu, použijeme
+      následující syntax:</para>
 
       <example>
         <title>Užití obrázků</title>
