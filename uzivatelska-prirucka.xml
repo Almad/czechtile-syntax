@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 <chapter lang="cs">
   <title>Dokumentace syntaxe CzechTile</title>
 
@@ -35,8 +37,8 @@
     <section>
       <title>Odstavce a řádkování</title>
 
-      <para>Odstavec provedeme prostým dvojitým odřádkováním. <emphasis>(tohle
-      jsem střelil od boku, ale počítám, že to tak bude :-))</emphasis></para>
+      <para>Odstavec vytvoříme jednoduše: stačí vynechat řádek mezi bloky
+      textu.</para>
 
       <example>
         <title>Odstavec</title>
@@ -46,8 +48,19 @@
 Druhý odstavec...</userinput></literallayout>
       </example>
 
-      <para>Jednoduché řádkování - <emphasis>je nutno
-      domyslet!</emphasis></para>
+      <para>Jelikož je text často psán ve webových stránkách s omezenou
+      šířkou, není vidět, zda byl text zalomen kvůli úzkému poli nebo pomocí
+      entru. Takový text je tedy nakonec pořád součástí prvního
+      odstavce.<example>
+          <title>Odstavec se zalomením</title>
+
+          <literallayout><userinput>První odstavec našeho textu se píše normálně.
+Ačkoli je další věta na dalším řádku, nakonec se ale zobrazí jako součást prvního odstavce.</userinput></literallayout>
+
+          <para>Zobrazení tedy bude</para>
+
+          <literallayout><computeroutput>První odstavec našeho textu se píše normálně. Ačkoli je další věta na dalším řádku, nakonec se ale zobrazí jako součást prvního odstavce.</computeroutput></literallayout>
+        </example></para>
     </section>
 
     <section>
@@ -69,9 +82,19 @@ Druhý odstavec...</userinput></literallayout>
       </example>
 
       <note>
-        <para>Bude zápis absolutní nebo relativní? Jaká bude maximální hloubka
-        (bude-li určena)?</para>
+        <para>Zápis je absolutní, je tedy možné přeskakovat úrovně nadpisů.
+        Nedoporučuje deset z devíti typografů.</para>
       </note>
+
+      <para>Pokud po vás zdrojový text nebude číst mnoho lidí a pospícháte, je
+      možné použít i zjednodušenou syntax, ve které se vynechá pravá
+      část:</para>
+
+      <example>
+        <title>Nadpis bez pravé části</title>
+
+        <para><literallayout><userinput>= Nadpis 1</userinput></literallayout><literallayout><userinput>== Nadpis 2</userinput></literallayout></para>
+      </example>
     </section>
 
     <section>
@@ -90,9 +113,8 @@ A. Einstein
       </example>
 
       <note>
-        <para>Stanovit mechanismy k rozlišení citace / kódu? Co s atributy
-        jako zdroj nebo druh syntaxe zdrojáku? Automatické doplňování
-        uvozovek?</para>
+        <para>Syntaxe je zatím nekompletní a bude rozšířena pro zápis
+        zdrojových kodu a pod.</para>
       </note>
     </section>
 
@@ -105,7 +127,14 @@ A. Einstein
     <section>
       <title>Horní a dolní index</title>
 
-      <para><emphasis>K domyšlení</emphasis></para>
+      <para>Jelikož nejsou často používány, není pro ně žádná specielní syntax
+      a musí být zapsány makrem, tedy</para>
+
+      <example>
+        <title>Horní a dolní index</title>
+
+        <para><literallayout><userinput>Vzorec vody je H((dolni-index 2))O ((horni-index (potřebná citace) ))</userinput></literallayout></para>
+      </example>
     </section>
 
     <section>
@@ -116,12 +145,33 @@ A. Einstein
       <example>
         <title>Závorkové odkazy</title>
 
-        <literallayout><userinput>(http://rpglanet.cz Ultimátní a kůl server o dračáku)</userinput></literallayout>
+        <literallayout><userinput>(http://czechtile.info Zde jednou naleznete tohle všechno.)</userinput></literallayout>
+      </example>
+
+      <para>Samozřejmě, pokud se v textu vyskytuje text v plné formě, je
+      zvýrazněn automaticky.<example>
+          <title>Plný odkaz v textu</title>
+
+          <literallayout><userinput>http://toto.bude.vykresleno.jako.odkaz.cz/</userinput></literallayout>
+        </example></para>
+
+      <para>Pokud je navíc v notoricky známé formě, není ani potřeba uvádět
+      protokol:</para>
+
+      <example>
+        <title>www.odkaz v textu</title>
+
+        <literallayout><userinput>Tento text najdete na www.czechtile.info.</userinput></literallayout>
       </example>
     </section>
 
     <section>
       <title>Obrázky</title>
+
+      <para><warning>
+          <para>Obrázky jsou aktuálně předělávány a tato sekce je ve
+          vývoji.</para>
+        </warning></para>
 
       <para>Máme-li obrázky k dispozici přímo v požadované velikosti, stačí
       zapsat jejich URL. Odkazy začínající na http://, jejichž koncovka je
@@ -231,10 +281,10 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec viverra laoreet 
       <title>Seznamy</title>
 
       <para>Seznamy máme v podstatě dvojího druhu. Číslované a nečíslované.
-      Číslování pak může být vyjádřeno navíc různým způsobem (latinska, římské
-      č., arabské č., hebrejské p., arménské p... :-)). CzechTile implemetuje
-      odrážky, arabské číslice, římské číslice a latinku. Seznam zahajujeme
-      tak, že před odrážku vložíme ještě mezeru:</para>
+      Číslování pak může být vyjádřeno navíc různým způsobem (latinkou,
+      římskými číslicemi, arabskými číslicemi, hebrejsky, arménsky...).
+      CzechTile podporuje odrážky, arabské číslice, římské číslice a latinku.
+      Seznam zahajujeme tak, že před odrážku vložíme ještě mezeru:</para>
 
       <example>
         <title>Seznamy</title>
@@ -273,12 +323,6 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec viverra laoreet 
     </section>
 
     <section>
-      <title>Tabulková data (zatím deprecated)</title>
-
-      <para>Formátování tabulek bude umožněno s další verzí CzechTile.</para>
-    </section>
-
-    <section>
       <title>Zvýraznění textu</title>
 
       <para>Pro zvýšení důležitosti textu je použito uazvření do dvojitých
@@ -310,29 +354,51 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec viverra laoreet 
       <example>
         <title>Užití negace</title>
 
-        <literallayout><userinput>!(http://rpglanet.cz Kůl ultimátní server o dračáku)</userinput></literallayout>
+        <literallayout><userinput>!(http://czechtile.info Zdroj informací)</userinput></literallayout>
       </example>
 
-      <para>Z tohoto zápisu by nemělo resultovat „<ulink
-      url="http://rpgplanet.cz">Kůl ultimátní server o dračáku</ulink>“, ale
-      „(http://rpglanet.cz Kůl ultimátní server o dračáku)“.</para>
+      <para>Nyní se nezobrazí „<ulink url="http://rpgplanet.cz">Zdroj
+      informací</ulink>“, ale „(http://czechtile.info Zdroj
+      informací)“.</para>
+
+      <para><note>
+          <para>Tato sekce je nedostatečně popsána pro složitější případy.
+          Víme to a bude doplněna.</para>
+        </note></para>
     </section>
 
     <section>
       <title>Makra</title>
 
       <para>Pomocí maker můžeme zapsat jakoukoli z výše zmíněných funkcí
-      CzechTile a také některé další. Typické makro vypadá asi takto:</para>
+      CzechTile a také některé další. Zápis makra je takovýto:</para>
 
       <example>
-        <title>Makro</title>
+        <title>Zápis makra</title>
 
         <literallayout><userinput>((název_makra parametr1 parametr2 parametr3 ...))</userinput></literallayout>
       </example>
+
+      <para>Silný text tedy můžete zapsat i v této podobě:</para>
+
+      <example>
+        <title>Makro "silně" v makro zápisu</title>
+
+        <literallayout><userinput>((silne tučný text))</userinput></literallayout>
+      </example>
+
+      <note>
+        <para>Zápis všech možný maker najdete v příslušné sekci, až bude
+        hotova ::)</para>
+      </note>
     </section>
 
     <section>
       <title>Typografická pravidla</title>
+
+      <warning>
+        <para>Tato sekce je ve vývoji a žádná část není implementována.</para>
+      </warning>
 
       <para>Asi tady toho bude víc, než zvládnem...</para>
 
@@ -346,13 +412,12 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec viverra laoreet 
           <listitem>
             <para>máme jednoslovnou spojku nebo předložku</para>
 
-            <para>mezi číslem a jednotkou (7&#160;cm,
-            3&#160;procenta,...)</para>
+            <para>mezi číslem a jednotkou (7 cm, 3 procenta,...)</para>
 
-            <para>zkratky (s.&#160;r.&#160;o., a.&#160;s.)</para>
+            <para>zkratky (s. r. o., a. s.)</para>
 
-            <para>před pomlčkami, jsou-li odděleny mezerou (Jan&#160;-&#160;to
-            je ten s tím autem&#160;-&#160;šel do hospody)</para>
+            <para>před pomlčkami, jsou-li odděleny mezerou (Jan - to je ten s
+            tím autem - šel do hospody)</para>
           </listitem>
         </varlistentry>
 
@@ -360,8 +425,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec viverra laoreet 
           <term>úzká mezera &amp;thinsp;</term>
 
           <listitem>
-            <para>používá se při dělení trojcifer v dlouhých číslech
-            (1000000), zlá podpora u IE...</para>
+            <para>používá se při dělení trojcifer v dlouhých číslech (1 000
+            000), zlá podpora u IE...</para>
           </listitem>
         </varlistentry>
       </variablelist>
