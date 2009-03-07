@@ -147,6 +147,22 @@ A. Einstein
 
         <literallayout><userinput>(http://czechtile.info Zde jednou naleznete tohle všechno.)</userinput></literallayout>
       </example>
+
+      <para>Samozřejmě, pokud se v textu vyskytuje text v plné formě, je
+      zvýrazněn automaticky.<example>
+          <title>Plný odkaz v textu</title>
+
+          <literallayout><userinput>http://toto.bude.vykresleno.jako.odkaz.cz/</userinput></literallayout>
+        </example></para>
+
+      <para>Pokud je navíc v notoricky známé formě, není ani potřeba uvádět
+      protokol:</para>
+
+      <example>
+        <title>www.odkaz v textu</title>
+
+        <literallayout><userinput>Tento text najdete na www.czechtile.info.</userinput></literallayout>
+      </example>
     </section>
 
     <section>
