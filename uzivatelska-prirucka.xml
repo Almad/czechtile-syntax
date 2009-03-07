@@ -127,7 +127,14 @@ A. Einstein
     <section>
       <title>Horní a dolní index</title>
 
-      <para><emphasis>K domyšlení</emphasis></para>
+      <para>Jelikož nejsou často používány, není pro ně žádná specielní syntax
+      a musí být zapsány makrem, tedy</para>
+
+      <example>
+        <title>Horní a dolní index</title>
+
+        <para><literallayout><userinput>Vzorec vody je H((dolni-index 2))O ((horni-index (potřebná citace) ))</userinput></literallayout></para>
+      </example>
     </section>
 
     <section>
