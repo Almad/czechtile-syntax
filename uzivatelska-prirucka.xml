@@ -368,6 +368,19 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec viverra laoreet 
     </section>
 
     <section>
+      <title>Označení práv a spol.</title>
+
+      <para>V textu je také obvyklé označovat trademark, copyright a all
+      rights reserved. To lze v Czechtile uvedením písmen v závorkách:</para>
+
+      <example>
+        <title>Práva a přátelé</title>
+
+        <literallayout><userinput>Trademark(TM) s copyrightem(c) a všemi právy vyhrazenými(R).</userinput></literallayout>
+      </example>
+    </section>
+
+    <section>
       <title>Makra</title>
 
       <para>Pomocí maker můžeme zapsat jakoukoli z výše zmíněných funkcí
