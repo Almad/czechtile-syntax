@@ -1,0 +1,12 @@
+#!/bin/bash
+if [[ ! -d "generated" ]]
+then
+	mkdir "generated"
+fi
+for i in "main"
+do
+	xsltproc --xinclude -o $i.fo article.xsl $i.xml
+	#/usr/local/xep/xep -fo $i.fo -pdf generated/$i.pdf
+	fop -c ./myfop.xconf -fo $i.fo -pdf generated/$i.pdf
+	rm $i.fo
+done
