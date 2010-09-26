@@ -12,3 +12,5 @@
   <dt>Zvýraznění</dt>
     <dd>Je-li potřeba zvýraznit některou část textu, stačí ji uzavřít mezi dvojici uvozovek (např. ""zvýraznit""). Ještě větší zvýraznění lze provést pomocí trojice uvozovek.</dd>
 </dl>
+
+<p>Návod na pokročilé formátování textu lze najít <a href="http://czechtile.info">v návodu</a>.</p>
