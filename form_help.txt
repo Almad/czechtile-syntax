@@ -1,0 +1,15 @@
+<h1>Jak formátovat text?</h1>
+
+<p>Pro formátování textu v tomto poli lze použít několik jednoduchých značek.</p>
+
+<dl>
+  <dt>Odstavce</dt>
+    <dd>Stačí vložit prázdný řádek mezi dva bloky textu<dd>
+  <dt>Nadpisy</dt>
+    <dd>Vytvořte tak, že kolem textu nadpisu napíšete <em>rovnítka (=)</em>. Čím více rovnítek, tím nižší úroveň nadpisu (např. <em>= Kapitola =</em> 1 vs. <em>== Kapitola 1.1 ==</em>)</dd>
+  <dt>Odkazy</dt>
+    <dd>Se vkládají do kulatých závorek, jako např. <em>(http://rpgplanet.cz RPGPlanet je server pro všechny hráče rpg)</em>. Adresy vložené do textu jsou převedeny na odkaz automaticky.</dd>
+  <dt>Zvýraznění</dt>
+    <dd>Je-li potřeba zvýraznit některou část textu, stačí ji uzavřít mezi dvojici uvozovek (např. ""zvýraznit""). Ještě větší zvýraznění lze provést pomocí trojice uvozovek.</dd>
+</dl> 
+  
