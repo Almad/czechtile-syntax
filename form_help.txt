@@ -11,5 +11,4 @@
     <dd>Se vkládají do kulatých závorek, jako např. <em>(http://rpgplanet.cz RPGPlanet je server pro všechny hráče rpg)</em>. Adresy vložené do textu jsou převedeny na odkaz automaticky.</dd>
   <dt>Zvýraznění</dt>
     <dd>Je-li potřeba zvýraznit některou část textu, stačí ji uzavřít mezi dvojici uvozovek (např. ""zvýraznit""). Ještě větší zvýraznění lze provést pomocí trojice uvozovek.</dd>
-</dl> 
-  
+</dl>
