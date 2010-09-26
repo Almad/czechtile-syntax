@@ -6,11 +6,11 @@
   <dt>Odstavce</dt>
     <dd>Stačí vložit prázdný řádek mezi dva bloky textu<dd>
   <dt>Nadpisy</dt>
-    <dd>Vytvořte tak, že kolem textu nadpisu napíšete <em>rovnítka (=)</em>. Čím více rovnítek, tím nižší úroveň nadpisu (např. <em>= Kapitola =</em> 1 vs. <em>== Kapitola 1.1 ==</em>)</dd>
+    <dd>Vytvořte tak, že kolem textu nadpisu napíšete <em>rovnítka (=)</em>. Čím více rovnítek, tím nižší úroveň nadpisu (např. <em>= Kapitola 1=</em> vs. <em>== Kapitola 1.1 ==</em>)</dd>
   <dt>Odkazy</dt>
     <dd>Se vkládají do kulatých závorek, jako např. <em>(http://rpgplanet.cz RPGPlanet je server pro všechny hráče rpg)</em>. Adresy vložené do textu jsou převedeny na odkaz automaticky.</dd>
   <dt>Zvýraznění</dt>
-    <dd>Je-li potřeba zvýraznit některou část textu, stačí ji uzavřít mezi dvojici uvozovek (např. ""zvýraznit""). Ještě větší zvýraznění lze provést pomocí trojice uvozovek.</dd>
+    <dd>Je-li potřeba zvýraznit některou část textu, stačí ji uzavřít mezi dvojici uvozovek <em>(např. ""zvýraznit"")</em>. Ještě větší zvýraznění lze provést pomocí trojice uvozovek.</dd>
 </dl>
 
 <p>Návod na pokročilé formátování textu lze najít <a href="http://czechtile.info">v návodu</a>.</p>
